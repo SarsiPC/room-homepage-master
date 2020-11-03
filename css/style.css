@@ -1,0 +1,317 @@
+body{
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 12px;
+	font-family: 'Spartan', sans-serif;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+img{
+	display: block;
+}
+
+.main-container{
+	max-width: 1440px;
+}
+
+.nav-bar{
+	display: flex;
+	position: relative;
+}
+
+.nav-ham{
+	display: none;
+	cursor: pointer;
+}
+
+.nav-ham:hover, .nav-ham:focus, .nav-ham:active {
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+}
+
+.logo{
+	position: absolute;
+	top: 3.9rem;
+	left: 4rem;
+}
+
+.nav-links{
+	position: absolute;
+	display: flex;
+	top: 4rem;
+	left: 11rem;
+}
+
+.nav-links p{
+	color: white;
+	margin-right: 2rem;
+	cursor: pointer;
+}
+
+.nav-links p:hover, .nav-links p:focus, .nav-links p:active {
+  color: hsl(0, 0%, 63%);
+}
+
+.mySlide{
+	display: flex;
+}
+
+.slide-img-mobile{
+	display: none
+}
+
+.slide-content{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 5rem;
+}
+
+.slider-img{
+	position: relative;
+}
+
+.slider-img img{
+	position: absolute;
+	background-color: black;
+	padding: 33px;
+}
+
+.slider-left{
+	top: 444px;
+	left: 840px;
+	cursor: pointer;
+}
+
+.slider-left:hover, .slider-left:focus, .slider-left:active {
+  background-color: hsl(0, 0%, 27%);
+}
+
+.slider-right{
+	top: 444px;
+	left: 920px;
+	cursor: pointer;
+}
+
+.slider-right:hover, .slider-right:focus, .slider-right:active {
+  background-color: hsl(0, 0%, 27%);
+}
+
+.slide-content h1{
+	font-size: 38px;
+	margin-bottom: 2rem;
+}
+
+.slide-content p{
+	color: hsl(0, 0%, 63%);
+	margin-bottom: 3rem;
+	line-height: 1.2rem;
+}
+
+.slide-button{
+	display: flex;
+}
+
+.slide-button h2{
+	font-weight: 500;
+	font-size: 12px;
+	letter-spacing: 0.7rem;
+	text-transform: uppercase;
+	margin-right: 2rem;
+	cursor: pointer;
+}
+
+.slide-button a:visited {
+  color: black;
+}
+
+.slide-button h2:hover, .slide-button h2:focus, .slide-button h2:active {
+  color: hsl(0, 0%, 63%);
+}
+
+.flex-box-div{
+	display: flex;
+}
+
+.content-3{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0 2rem 0 2rem;
+}
+
+.content-3 h2{
+	margin-bottom: 1rem;
+}
+
+.content-3 p{
+	color: hsl(0, 0%, 63%);
+	line-height: 1.2rem;
+}
+
+.attribution{
+	margin-top: 3rem;
+}
+
+@media only screen and (max-width: 1439px) {
+	.mySlide{
+		flex-direction: column;
+	}
+
+	.slide-img{
+		margin-bottom: 3.5rem;
+	}
+
+	.slide-content{
+		padding: 0 0 3.5rem 0;
+	}
+
+	.slider-left{
+		left: 680px;
+	}
+
+	.slider-right{
+		left: 760px;
+	}
+}
+
+@media only screen and (max-width: 1151px) {
+	.flex-box-div{
+		flex-direction: column;
+	}
+
+	.content-2{
+		margin-bottom: 3rem;
+	}
+
+	.content-3{
+		padding: 0 0 3rem 0;
+	}
+}
+
+@media only screen and (max-width: 856px) {
+	.nav-ham{
+		display: inline-block;
+		position: absolute;
+		top: 3rem;
+		left: 1.5rem;
+	}
+
+	.logo{
+		top: 3rem;
+		left: 9.7rem;
+	}
+
+	.nav-links{
+		display: none;
+	}
+
+	.content-1{
+		margin-bottom: 0.5rem;
+	}
+
+	.slider-img img{
+		padding: 20px;
+	}
+
+	.slider-left{
+		top: 296px;
+		left: 267px;
+	}
+
+	.slider-right{
+		top: 296px;
+		left: 321px;
+	}
+
+	.slide-img-mobile{
+		display: inline-block;
+	}
+
+	.slide-img-desktop{
+		display: none !important;
+	}
+
+	.slide-content h1{
+		font-size: 23px;
+		margin-bottom: 1rem;
+	}
+}
+
+@media only screen and (max-width: 375px) {
+	.main-container{
+		max-width: 375px;
+	}
+
+	.content-1{
+		margin-bottom: 2rem;
+	}
+
+	.slide-img img, .content-2 img, .content-4 img{
+		width: 100%;
+	}
+
+	.slide-content{
+		padding: 0 2rem 2rem 2rem;
+	}
+
+	.content-3{
+		padding: 0 2rem 3rem 2rem;
+	}
+}
+
+
+/*MOBILE OVERLAY*/
+
+.overlay{
+    height: 14%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: all 0.5s ease 0s;
+}
+
+.overlay-content{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.close{
+	margin: 0 4rem 0 1rem;
+	cursor: pointer;
+}
+
+.close:hover, .close:focus, .close:active {
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+}
+
+.overlay-content p{
+	margin-right: 1.5rem;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.overlay-content a:visited {
+  color: black;
+}
+
+.overlay-content p:hover, .overlay-content p:focus, .overlay-content p:active {
+  color: hsl(0, 0%, 63%);
+}
